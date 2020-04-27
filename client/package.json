@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@feathersjs/client": "^4.5.3",
+    "@feathersjs/feathers": "^4.5.3",
+    "@feathersjs/socketio-client": "^4.5.3",
     "axios": "^0.19.2",
+    "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
