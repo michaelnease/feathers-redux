@@ -63,6 +63,7 @@ class Application extends Component {
   }
 
   render() {
+    console.log('state: ', this.state);
     if (this.state.login === undefined) {
       return (
         <main className="container text-center">
@@ -70,7 +71,11 @@ class Application extends Component {
         </main>
       );
     } else if (this.state.login) {
-      return <Chat messages={this.state.messages} users={this.state.users} />;
+      return (
+        <div id="app">
+          <Chat messages={this.state.messages} users={this.state.users} />
+        </div>
+      );
     }
 
     return <Login />;

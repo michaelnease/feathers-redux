@@ -4,7 +4,7 @@ import Auth from './contexts/authContext';
 // import PrivateRoute from './components/privateRoute';
 // import Template from './components/template';
 import Home from './pages/Home';
-// import Chat from './pages/chat/application';
+import Chat from './pages/chat/application';
 // import Dashboard from './pages/dashboard';
 
 const App = () => {
@@ -18,9 +18,8 @@ const App = () => {
             {/* </Template> */}
           </Route>
           <Route exact path="/chat">
-            <p>blah</p>
             {/* <Template variant="clear"> */}
-            {/* <Chat /> */}
+            <Chat />
             {/* </Template> */}
           </Route>
           {/* <PrivateRoute exact path="/">

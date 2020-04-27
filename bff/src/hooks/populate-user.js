@@ -1,9 +1,8 @@
 // Use this hook to manipulate incoming or outgoing data.
 // For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
 
-/* eslint-disable require-atomic-updates */
-module.exports = function (options = {}) {
-  // eslint-disable-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
+module.exports = (options = {}) => {
   return async (context) => {
     // Get `app`, `method`, `params` and `result` from the hook context
     const { app, method, result, params } = context;
