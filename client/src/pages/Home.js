@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../components/Header';
+import Users from '../components/Users';
 
 const Home = () => {
   return (
     <div>
       <Header />
       <main>
-        <p>FPT</p>
+        <Users />
       </main>
     </div>
   );

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import client from '../app/feathers';
 export const AuthContext = React.createContext({});
 
+// This file will be repaced with Auth0 or AWS Cognito
+
 const Auth = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isAuthenticationError, setIsAuthenticationError] = useState(false);

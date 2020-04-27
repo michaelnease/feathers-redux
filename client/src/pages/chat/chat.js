@@ -60,7 +60,7 @@ class Chat extends Component {
             <ul className="flex flex-column flex-1 list-unstyled user-list">
               {users.map((user) => (
                 <li key={user._id}>
-                  <a className="block relative" href="#">
+                  <a className="block relative" href="/home">
                     <img src={user.avatar} alt={user.email} className="avatar" />
                     <span className="absolute username">{user.email}</span>
                   </a>
@@ -68,7 +68,7 @@ class Chat extends Component {
               ))}
             </ul>
             <footer className="flex flex-row flex-center">
-              <a href="#" onClick={() => client.logout()} className="button button-primary">
+              <a href="/home" onClick={() => client.logout()} className="button button-primary">
                 Sign Out
               </a>
             </footer>

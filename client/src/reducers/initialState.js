@@ -1,5 +1,6 @@
 export default {
   meta: {
-    site: '',
+    site: 'FPT',
   },
+  users: [],
 };
