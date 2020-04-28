@@ -1,5 +1,5 @@
-import * as actionTypes from '../constants/actionTypes';
-import initialState from './initialState';
+import * as actionTypes from '../constants/action.types';
+import initialState from './initial.state';
 
 export default function metaReducer(state = initialState.meta, action) {
   switch (action.type) {

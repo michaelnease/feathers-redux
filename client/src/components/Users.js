@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { getUsers } from '../actions/userActions';
+import { useSelector, useDispatch } from 'react-redux';
+import { getUsers } from '../actions/user.actions';
 
-const Users = ({ getUsers, users }) => {
+const Users = () => {
+  const users = useSelector((state) => state.users);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    getUsers();
+    dispatch(getUsers());
   }, [getUsers]);
 
   return (
@@ -19,12 +22,4 @@ const Users = ({ getUsers, users }) => {
   );
 };
 
-const mapStateToProps = ({ users }) => ({
-  users,
-});
-
-const mapDispatchToProps = {
-  getUsers,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Users);
+export default Users;
