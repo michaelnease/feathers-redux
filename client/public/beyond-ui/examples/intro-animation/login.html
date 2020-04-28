@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="/beyond-ui/beyond-ui.css" />
+    <link rel="stylesheet" href="/examples/intro-animation/login.css" />
+    <script src="/node_modules/three/build/three.min.js"></script>
+    <script src="/node_modules/animejs/lib/anime.min.js"></script>
+    <style>
+      .button--indigo {
+        text-align: center;
+        border-radius: 2px;
+        background: var(--primary);
+        color: var(--white);
+        border: 1px solid var(--primary);
+        font-size: 0.8rem;
+        padding: 0.2rem;
+      }
+
+      .button--indigo:hover {
+        text-decoration: none;
+        background-color: #465194;
+        color: var(--white);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="canvas-wrapper">
+      <div class="intro-content">
+        <h3>Refinery Operations Advisor</h3>
+        <p>
+          After clicking on the login button, you'll be redirected to
+          Microsoft's authentication page where you'll be able to enter your
+          credentials to login.
+        </p>
+        <div class="intro-buttons">
+          <button class="button--indigo">Sign in</button>
+        </div>
+      </div>
+      <canvas id="js-particles" class="particles">
+        Sorry your browser is not supported. Please upgrade to the latest
+        browser.
+      </canvas>
+    </div>
+    <script src="/examples/intro-animation/login.js"></script>
+  </body>
+</html>

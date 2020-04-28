@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './main.css';
 
-export const With_Header = ({ children }) => {
+export const WithHeader = ({ children }) => {
   return (
     <div className="dashboard">
       <header className="dashboard__header">
-        <a href="https://www.beyond.ai/">
+        <Link to="/">
           <img className="header-logo" src="images/logo.svg" alt="Beyond Limits" />
-        </a>
+        </Link>
       </header>
       <main className="dashboard__main">
         <div className="dashboard__inner ui-card">{children}</div>
@@ -15,29 +17,55 @@ export const With_Header = ({ children }) => {
   );
 };
 
-export const With_Header_Sidebar = ({ children }) => {
+export const WithHeaderSidebar = ({ children, initialSidebarState }) => {
+  const [isOpen, setIsOpen] = useState(initialSidebarState);
+
+  const handleToggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="dashboard">
       <header className="dashboard__header">
-        <button className="hamburger-menu">
+        <button className="hamburger-menu" onClick={handleToggleSidebar}>
           <i className="fe fe-menu" />
         </button>
-        <a href="https://www.beyond.ai/">
+        <Link to="/">
           <img className="header-logo" src="images/logo.svg" alt="Beyond Limits" />
-        </a>
+        </Link>
       </header>
 
-      {/* <nav className={`dashboard__nav ${!isNavOpen ? 'nav--closed' : ''}`}> */}
-      <nav className="dashboard__nav">
+      <nav className={`dashboard__nav ${!isOpen ? 'nav--closed' : ''}`}>
         <ul className="dashboard__main-nav">
           <li>
-            <p>Top Link</p>
+            <Link to="/historical-data">
+              <i className="fe fe-anchor" />
+              Historical Data
+            </Link>
           </li>
           <li>
-            <p>Middle Link</p>
+            <Link to="/create-new-project">
+              <i className="fe fe-anchor" />
+              Create New Project
+            </Link>
           </li>
           <li>
-            <p>Bottom Link</p>
+            <Link to="/projects">
+              <i className="fe fe-anchor" />
+              Projects
+            </Link>
+          </li>
+          <li>
+            <Link to="/worksheets">
+              <i className="fe fe-anchor" />
+              Worksheets
+            </Link>
+          </li>
+          <li>
+            <Link to="/archive">
+              <i className="fe fe-anchor" />
+              Archive
+            </Link>
           </li>
         </ul>
       </nav>

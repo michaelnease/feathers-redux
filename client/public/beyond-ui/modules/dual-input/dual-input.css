@@ -1,0 +1,29 @@
+.dual-input {
+  display: flex;
+  flex-direction: row;
+}
+
+.dual-input button {
+  border-radius: 0;
+  border-width: 0.2px;
+}
+
+.dual-input button:first-child {
+  border-bottom: 0;
+}
+
+.dual-input .dual-input__children {
+  flex: 1;
+  border: 1px solid #bec1ca;
+  border-left: none;
+}
+
+.dual-input .dual-input__children > * {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.dual-input__buttons {
+  display: grid;
+}

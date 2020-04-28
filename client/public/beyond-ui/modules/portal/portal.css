@@ -1,0 +1,50 @@
+body.portal--active .dashboard__inner {
+  transition: all 250ms ease-in-out;
+  transition-property: blur, opacity;
+  /*filter: blur(3px);*/
+  overflow: hidden;
+  height: 100%;
+}
+
+.dashboard__inner:after {
+  opacity: 0;
+}
+
+body.portal--active .dashboard__inner:after {
+  transition: all 250ms ease-in-out;
+  opacity: 1;
+  content: "";
+  position: fixed;
+  height: 100%;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 99;
+}
+
+.portal,
+.portal.--active {
+  transition: all 250ms ease-in-out;
+}
+
+.portal {
+  position: absolute;
+  visibility: hidden;
+  z-index: 99;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  min-height: 4.3rem;
+  transform: translate(-50%, 0);
+  border-width: 1px 0 1px 0;
+  max-width: 33rem;
+  padding: 1.5rem 2rem;
+}
+
+.portal.--active {
+  visibility: visible;
+  transform: translate(-50%, 3.5rem);
+}

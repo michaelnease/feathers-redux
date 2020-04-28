@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kitchen Sink</title>
+    <link rel="stylesheet" href="/beyond-ui/beyond-ui.css" />
+    <style>
+      .page {
+        padding: var(--space2);
+      }
+      .grid-example {
+        --autogrid-min-width: 10rem;
+      }
+      .grid-example li {
+        min-height: 100px;
+        background: rgba(165, 94, 234, 0.2);
+        border-radius: 2px;
+        padding: 1rem;
+        color: var(--purple);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 10rem;
+      }
+    </style>
+  </head>
+  <body class="l-beyond-body">
+    <div id="app">
+      <div class="dashboard">
+        <header class="dashboard__header">
+          <button class="hamburger-menu"><i class="fe fe-menu"></i></button
+          ><img
+            class="header-logo"
+            src="/beyond-ui/images/logo.svg"
+            alt=""
+          />
+          <div class="top-nav">
+            <ul class="list-unstyled ui-space-list">
+              <li><a href="">first item</a></li>
+              <li><a href="">Second Item</a></li>
+            </ul>
+          </div>
+          <div class="dashboard__action">
+            <button class="ui-button --black --min --wide">Account</button>
+          </div>
+        </header>
+        <nav class="dashboard__nav ">
+          <ul class="dashboard__main-nav">
+            <li>
+              <a class="" href="/usage"
+                ><i class="fe fe-settings"></i>
+                <p>Navigation 1</p>
+              </a>
+            </li>
+            <li>
+              <a class="" href="/type"
+                ><i class="fe fe-type"></i>
+                <p>Navigation 2</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="dashboard__secondary-nav">
+            <li>
+              <a class="" href="/about"
+                ><i class="fe fe-info"></i>
+                <p>About</p>
+              </a>
+            </li>
+            <li class="nav-copyright">
+              <div>
+                <span>©</span>
+                <p>2019 Beyond Limits, Inc.</p>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <main class="dashboard__main">
+          <div class="dashboard__inner ui-card">
+            <h1 class="display-3 ui-title title--t1">Beyond UI</h1>
+            <div class="ui-margin-list">
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Buttons</h2>
+                <div class="ui-elm-list">
+                  <button class="ui-button">Default Button</button>
+                  <button class="ui-button --black">Black Button</button>
+                  <button class="ui-button --transparent">Transparent</button>
+                  <button class="ui-button --upper">uppercase button</button>
+                  <button class="ui-button --primary">Primary Button</button>
+                  <button class="ui-button --warning">Warning Button</button>
+                  <button class="ui-button --danger">Danger Button</button>
+                  <button class="ui-button --sm">Small</button>
+                  <button class="ui-button">Normal</button>
+                  <button class="ui-button --min">M</button>
+                  <button class="ui-button --md">Medium</button>
+                  <button class="ui-button --lg">Large</button>
+                  <button class="ui-button --sm --wide">Small</button>
+                  <button class="ui-button --min --wide">Normal Wide</button>
+                  <button class="ui-button --min --wide">W</button>
+                  <button class="ui-button --md --wide">Medium Wide</button>
+                  <button class="ui-button --lg --wide">Large Wide</button>
+                  <button class="ui-button btn-spinner">
+                    Spinner <span class="ui-spinner"></span>
+                  </button>
+                  <button class="ui-button btn-with-icon">
+                    <span>
+                      Delete <i class="fe fe-x"></i>
+                    </span>
+                  </button>
+                  <button class="ui-button --pill --danger btn-with-icon">
+                    <span>
+                      Delete <i class="fe fe-x"></i>
+                    </span>
+                  </button>
+                  <button class="ui-button --pill --sm">Pill Small</button>
+                  <button class="ui-button --pill">Default Size</button>
+                  <button class="ui-button --pill --wide">Default Size Wide</button>
+                </div>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Headings</h2>
+                <ul class="ui-margin-list">
+                  <li>
+                    <h1>Heading 1</h1>
+                  </li>
+                  <li>
+                    <h2>Heading 2</h2>
+                  </li>
+                  <li>
+                    <h3>Heading 3</h3>
+                  </li>
+                  <li>
+                    <h4>Heading 4</h4>
+                  </li>
+                  <li>
+                    <h5>Heading 5</h5>
+                  </li>
+                </ul>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Display Headings</h2>
+                <ui class="margin-list">
+                  <li>
+                    <h1 class="display-1">Display 1</h1>
+                  </li>
+                  <li>
+                    <h1 class="display-2">Display 2</h1>
+                  </li>
+                  <li>
+                    <h1 class="display-3">Display 3</h1>
+                  </li>
+                  <li>
+                    <h1 class="display-4">Display 4</h1>
+                  </li>
+                </ui>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Lists</h2>
+                <ul class="ui-margin-list">
+                  <li>
+                    <h4>Bullest List</h4>
+                    <ul class="ui-bullet-list">
+                      <li>
+                        first item
+                        <ul>
+                          <li>nested item 1</li>
+                          <li>nested item 2</li>
+                        </ul>
+                      </li>
+                      <li>second item</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>Nested Bullet List</h4>
+                    <ul class="ui-bullet-list">
+                      <li>
+                        first item
+                        <ul>
+                          <li>
+                            nested item 1 Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Earum maiores, veniam assumenda quod ut officia impedit
+                            sapiente quam deleniti voluptatum ipsam velit eaque! Ab sapiente
+                            ut veniam eveniet consequatur accusamus quod et accusantium
+                            distinctio itaque nam ducimus quae sequi blanditiis, harum tempore
+                            cumque perferendis soluta minima consectetur repudiandae neque
+                            delectus dolorem. Rerum modi aliquam, laboriosam asperiores
+                            provident quas at. Est sapiente magni sunt vel rem, quas nisi, cum
+                            a deleniti ullam, ex architecto accusantium laboriosam optio
+                            distinctio fugit placeat quis debitis neque dicta sed nostrum.
+                            Nulla facilis impedit repudiandae et dicta minus, molestias,
+                            delectus sunt consequatur ipsam officiis voluptates doloribus.
+                          </li>
+                          <li>
+                            nested item 2 Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Eius adipisci, voluptates totam quo. Accusamus magnam nobis
+                            accusantium ipsum libero sit quisquam? Dolor, est similique quo
+                            quibusdam nemo magni esse repellendus.
+                          </li>
+                        </ul>
+                      </li>
+                      <li>second item</li>
+                      <li>third</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>Ordered List</h4>
+                    <ol class="ui-bullet-list">
+                      <li>First Count</li>
+                      <li>Second Count</li>
+                      <li>
+                        third count
+                        <ol>
+                          <li>nested first</li>
+                          <li>Nested second</li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <h4>Nested Ordered List</h4>
+                    <ol class="ui-ordered-list">
+                      <li>First Count</li>
+                      <li>Second Count</li>
+                      <li>
+                        third count
+                        <ol>
+                          <li>
+                            nested first Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Est quam velit sint totam, optio debitis, labore ipsa culpa
+                            rem nemo porro animi eius impedit voluptatem. Ullam maiores
+                            voluptatibus consectetur odit.
+                          </li>
+                          <li>
+                            Nested second Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Placeat totam vitae optio ullam sequi? Reiciendis eos dolor
+                            neque, cum cumque libero ut asperiores facilis sint excepturi
+                            dolore, quo nihil molestias, quas ab ullam soluta voluptas
+                            explicabo quod iure atque officiis quae! Inventore nesciunt beatae
+                            illum, ut labore unde voluptate ipsum minima rerum. Provident
+                            recusandae porro veritatis dicta ab laborum, similique cum.
+                            Accusamus sapiente nihil dicta modi earum accusantium id
+                            cupiditate similique tempore est eum itaque cumque in, beatae sit
+                            eveniet recusandae fugit nostrum neque ullam quas inventore, illum
+                            at, iusto voluptate. Accusantium vel quas praesentium quos.
+                            Quisquam a quod voluptatibus.
+                          </li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li>
+                    <h4>Organized List</h4>
+                    <ul class="ui-elm-list list-unstyled">
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                      <li>
+                        <button class="ui-button">button</button>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <h4>List with No Styles</h4>
+                    <ul class="list-unstyled">
+                      <li>Item</li>
+                      <li>Item 2</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Forms</h2>
+                <ul class="ui-margin-list">
+                  <li>
+                    <h4>Simple Input</h4>
+                    <div class="l-eq-space">
+                      <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="example-text-input"
+                          placeholder="Jon Doe"
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h4>Inputs with Icons</h4>
+                    <div class="l-eq-space">
+                      <div class="form-group">
+                        <label class="form-label">Search</label>
+                        <div class="input-icon">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Search for..."
+                          />
+                          <span class="input-icon-addon">
+                            <i class="fe fe-search"></i>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="input-icon">
+                          <span class="input-icon-addon">
+                            <i class="fe fe-user" ></i>
+                          </span>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Username"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h4>Form with Fieldset</h4>
+                    <fieldset class="form-fieldset">
+                      <div class="form-group">
+                        <label class="form-label">Full name<span class="form-required">*</span></label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Company<span class="form-required">*</span></label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <label class="form-label">Email<span class="form-required">*</span></label>
+                        <input type="email" class="form-control">
+                      </div>
+                      <div class="form-group mb-0">
+                        <label class="form-label">Phone number</label>
+                        <input type="tel" class="form-control">
+                      </div>
+                    </fieldset>
+                  </li>
+                  <li>
+                    <h4>Custom Switch</h4>
+                    <div class="l-eq-space">
+                      <div class="form-group">
+                        <label class="custom-switch">
+                          <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" />
+                          <span class="custom-switch-indicator"></span>
+                          <span class="custom-switch-description">
+                            Show Archived Projects
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <h4>Input with Single Submit</h4>
+                    <div class="ui-inline-input">
+                      <input class="form-control" type="text" />
+                      <button class="button--flat">Submit</button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Tables</h2>
+                <ul class="ui-margin-list">
+                  <li>
+                    <h4>Primary Table</h4>
+                    <table class="ui-table --primary">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Commit</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li>
+                    <h4>Simple Table</h4>
+                    <table class="ui-table">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Commit</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                  <li>
+                    <h4>Custom Table</h4>
+                    <table class="ui-custom-table">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Commit</th>
+                          <th>Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                        <tr>
+                          <td>153</td>
+                          <td>11.553</td>
+                          <td>12.05</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </ul>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Grids</h2>
+                <p>Built-in CSS Grid is very useful for defining layouts. You won't need anything like Bootstrap Grid to define layouts. Examples below demonstrate some common use cases.</p>
+                <h4>Auto Grid</h4>
+                <ul class="ui-auto-grid grid-example list-unstyled">
+                  <li>0</li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li>9</li>
+                  <li>10</li>
+                  <li>11</li>
+                  <li>12</li>
+                  <li>13</li>
+                  <li>14</li>
+                  <li>15</li>
+                  <li>16</li>
+                  <li>17</li>
+                  <li>18</li>
+                  <li>19</li>
+                </ul>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Cards</h2>
+                <div class="ui-card l-mt">
+                  <div class="l-flex-between ui-title">
+                    <h4 class="ui-card__title">Card Title</h4>
+                    <div class="ui-elm-list">
+                    <button class="ui-button btn-with-icon">
+                      <span>
+                        Edit <i class="fe fe-edit-2"></i>
+                      </span>
+                    </button>
+                    </div>
+                  </div>
+                  <div class="ui-card__body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Perferendis expedita numquam voluptatem sint eos, libero quod sed
+                      quas odit cum quasi fugiat sequi hic repellendus optio eius
+                      inventore nihil, aperiam.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Tags</h2>
+                <div class="ui-elm-list">
+                  <span class="ui-tag">First tag</span>
+                  <span class="ui-tag">Second tag</span>
+                  <span class="ui-tag">Third tag</span>
+                </div>
+                <div class="ui-elm-list">
+                  <span class="ui-tag ui-tag-rounded">First tag</span>
+                  <span class="ui-tag ui-tag-rounded">Second tag</span>
+                  <span class="ui-tag ui-tag-rounded">Third tag</span>
+                </div>
+                <div class="ui-elm-list">
+                  <span class="ui-tag ui-tag-blue">Blue tag</span>
+                  <span class="ui-tag ui-tag-azure">Azure tag</span>
+                  <span class="ui-tag ui-tag-indigo">Indigo tag</span>
+                  <span class="ui-tag ui-tag-purple">Purple tag</span>
+                  <span class="ui-tag ui-tag-pink">Pink tag</span>
+                  <span class="ui-tag ui-tag-red">Red tag</span>
+                  <span class="ui-tag ui-tag-orange">Orange tag</span>
+                  <span class="ui-tag ui-tag-yellow">Yellow tag</span>
+                  <span class="ui-tag ui-tag-lime">Lime tag</span>
+                  <span class="ui-tag ui-tag-green">Green tag</span>
+                  <span class="ui-tag ui-tag-teal">Teal tag</span>
+                  <span class="ui-tag ui-tag-cyan">Cyan tag</span>
+                  <span class="ui-tag ui-tag-gray">Gray tag</span>
+                  <span class="ui-tag ui-tag-gray-dark">Dark gray tag</span>
+                </div>
+                <div class="ui-elm-list">
+                  <span class="ui-tag">
+                    One
+                    <a href="#" class="ui-tag-addon"><i class="fe fe-x"></i></a>
+                  </span>
+                  <span class="ui-tag">
+                    Two
+                    <a href="#" class="ui-tag-addon"><i class="fe fe-x"></i></a>
+                  </span>
+                  <span class="ui-tag">
+                    Three
+                    <a href="#" class="ui-tag-addon"><i class="fe fe-x"></i></a>
+                  </span>
+                  <span class="ui-tag">
+                    Four
+                    <a href="#" class="ui-tag-addon"><i class="fe fe-x"></i></a>
+                  </span>
+                </div>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Toasts</h2>
+                <div class="ui-margin-list">
+                  <div class="aj-toaster-wrapper --non-fixed --default-theme">
+                    <div class="aj-toaster aj-toaster--warning --active">
+                      <div class="aj-toaster__content">
+                        <p class="aj-toaster__title">Warning!</p>
+                        <p class="aj-toaster__message">
+                          Plan name cannot be empty
+                        </p>
+                      </div>
+                      <div class="aj-toaster__dismiss">
+                        <button>×</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="aj-toaster-wrapper --non-fixed --default-theme">
+                    <div class="aj-toaster aj-toaster--success --active">
+                      <div class="aj-toaster__content">
+                        <p class="aj-toaster__title">Success!</p>
+                        <p class="aj-toaster__message">
+                          Project was created successfully.
+                        </p>
+                      </div>
+                      <div class="aj-toaster__dismiss">
+                        <button>×</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="aj-toaster-wrapper --non-fixed --default-theme">
+                    <div class="aj-toaster aj-toaster--failure --active">
+                      <div class="aj-toaster__content">
+                        <p class="aj-toaster__title">Oops...!</p>
+                        <p class="aj-toaster__message">
+                          Could not save the project. Please try again with a different name.
+                        </p>
+                      </div>
+                      <div class="aj-toaster__dismiss">
+                        <button>×</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="aj-toaster-wrapper --non-fixed --default-theme">
+                    <div class="aj-toaster aj-toaster--info --active">
+                      <div class="aj-toaster__content">
+                        <p class="aj-toaster__title">Note...</p>
+                        <p class="aj-toaster__message">
+                          Project will be automatically saved.
+                        </p>
+                      </div>
+                      <div class="aj-toaster__dismiss">
+                        <button>×</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ui-card">
+                <h2 class="ui-title title--t1">Spinners</h2>
+                <div class="ui-elm-list">
+                  <div class="ui-spinner"></div>
+                  <div class="ui-spinner spinner--primary"></div>
+                  <div class="ui-spinner spinner--secondary"></div>
+                  <div class="ui-spinner spinner--success"></div>
+                  <div class="ui-spinner spinner--info"></div>
+                  <div class="ui-spinner spinner--warning"></div>
+                  <div class="ui-spinner spinner--danger"></div>
+                  <div class="ui-spinner spinner--light"></div>
+                  <div class="ui-spinner spinner--dark"></div>
+                  <div class="ui-spinner spinner--md"></div>
+                  <div class="ui-spinner spinner--lg"></div>
+                  <div class="ui-spinner spinner--fast"></div>
+                  <div class="ui-spinner spinner--slow"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

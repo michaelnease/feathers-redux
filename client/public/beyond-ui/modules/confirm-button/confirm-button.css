@@ -1,0 +1,5 @@
+.action-link,
+.action-link:hover {
+  text-decoration: none;
+  color: inherit;
+}

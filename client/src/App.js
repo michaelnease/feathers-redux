@@ -2,10 +2,16 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Auth from './contexts/auth.context';
 // import PrivateRoute from './components/privateRoute';
-import { With_Header, With_Header_Sidebar } from './components/layouts/main';
-import Home from './pages/Home';
+import { WithHeader, WithHeaderSidebar } from './components/layouts/main';
+
+import Home from './pages/home';
+import HistoricalData from './pages/historical-data';
+import CreateNewProject from './pages/create-new-project';
+import Projects from './pages/projects';
+import Worksheets from './pages/worksheets';
+import Archive from './pages/archive';
 import Chat from './pages/chat/application';
-import 'beyond-ui/beyond-ui.css';
+import './theme/FPT.css';
 
 const App = () => {
   return (
@@ -13,23 +19,47 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <p>Home</p>
+            <WithHeaderSidebar initialSidebarState={false}>
+              <Home />
+            </WithHeaderSidebar>
           </Route>
+
           <Route exact path="/historical-data">
-            <With_Header_Sidebar>
-              <p>Historical Data</p>
-            </With_Header_Sidebar>
+            <WithHeaderSidebar initialSidebarState={true}>
+              <HistoricalData />
+            </WithHeaderSidebar>
           </Route>
+
+          <Route exact path="/create-new-project">
+            <WithHeaderSidebar initialSidebarState={true}>
+              <CreateNewProject />
+            </WithHeaderSidebar>
+          </Route>
+
           <Route exact path="/projects">
-            <With_Header>
-              <p>projects</p>
-            </With_Header>
+            <WithHeaderSidebar initialSidebarState={false}>
+              <Projects />
+            </WithHeaderSidebar>
           </Route>
+
+          <Route exact path="/worksheets">
+            <WithHeaderSidebar initialSidebarState={false}>
+              <Worksheets />
+            </WithHeaderSidebar>
+          </Route>
+
+          <Route exact path="/Archive">
+            <WithHeaderSidebar initialSidebarState={false}>
+              <Archive />
+            </WithHeaderSidebar>
+          </Route>
+
           <Route exact path="/chat">
-            <With_Header>
+            <WithHeader>
               <Chat />
-            </With_Header>
+            </WithHeader>
           </Route>
+
           {/* <PrivateRoute exact path="/">
             <Template variant="main">
               <Dashboard />

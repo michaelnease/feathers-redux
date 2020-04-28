@@ -1,0 +1,18 @@
+.breadcrumb a {
+  text-decoration: none;
+  font-weight: 100;
+}
+
+.breadcrumb a:hover {
+  font-weight: 400;
+}
+
+.breadcrumb a.active-node {
+  pointer-events: none;
+  font-weight: 500;
+}
+
+.breadcrumb i {
+  line-height: unset;
+  color: var(--primary);
+}

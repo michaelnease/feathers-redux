@@ -1,0 +1,143 @@
+.aj-toaster-wrapper {
+  /* default properties. */
+  --aj-toaster__success: #41d888;
+  --aj-toaster__warning: #ffbd02;
+  --aj-toaster__info: #0387d7;
+  --aj-toaster__failure: #f94416;
+  --aj-toaster__success-text: #fff;
+  --aj-toaster__warning-text: #fff;
+  --aj-toaster__info-text: #fff;
+  --aj-toaster__failure-text: #fff;
+  --aj-toaster__width: 310px;
+  --aj-toaster__animation-duration: 300ms;
+  --aj-toaster__animation-easing: ease-in-out;
+
+  /* default styles */
+  width: var(--aj-toaster__width);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 5;
+  top: 5px;
+  right: 5px;
+}
+
+.aj-toaster-wrapper.--non-fixed {
+  position: static;
+}
+
+.aj-toaster-wrapper.--default-theme {
+  --aj-toaster__width: 320px;
+}
+
+.aj-toaster {
+  min-width: var(--aj-toaster__width);
+  max-width: var(--aj-toaster__width);
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-family: sans-serif;
+}
+
+.aj-toaster--success {
+  background: var(--aj-toaster__success);
+}
+.aj-toaster--warning {
+  background: var(--aj-toaster__warning);
+}
+.aj-toaster--info {
+  background: var(--aj-toaster__info);
+}
+.aj-toaster--failure {
+  background: var(--aj-toaster__failure);
+}
+
+.aj-toaster--success p {
+  color: var(--aj-toaster__success-text);
+}
+.aj-toaster--warning p {
+  color: var(--aj-toaster__warning-text);
+}
+.aj-toaster--info p {
+  color: var(--aj-toaster__info-text);
+}
+.aj-toaster--failure p {
+  color: var(--aj-toaster__failure-text);
+}
+
+.aj-toaster__content {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 8px 8px 16px;
+  min-height: 30px;
+}
+
+.aj-toaster__title,
+.aj-toaster__message {
+  margin: 0;
+  padding: 0;
+}
+.aj-toaster__title {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+.aj-toaster__message {
+  font-weight: 100;
+  font-size: 12px;
+}
+
+.aj-toaster__dismiss {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.aj-toaster__dismiss button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: none;
+  color: rgba(255, 255, 255, 0.81);
+  line-height: 0;
+  font-size: 20px;
+  margin: 0;
+  padding: 0 5px 0 5px;
+}
+.aj-toaster__dismiss button,
+.aj-toaster__dismiss button:hover {
+  transition: background-color 200ms ease-in-out;
+}
+.aj-toaster__dismiss button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.07);
+}
+.aj-toaster__dismiss button,
+.aj-toaster__dismiss button:active {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.aj-toaster__dismiss button:focus {
+  outline: 0;
+}
+
+/* animations */
+.aj-toaster {
+  opacity: 0;
+  transform: scale(1.1);
+}
+.aj-toaster.--active {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform var(--aj-toaster__animation-duration)
+      var(--aj-toaster__animation-easing) 0ms,
+    opacity var(--aj-toaster__animation-duration)
+      var(--aj-toaster__animation-easing) 50ms;
+}
+.aj-toaster.--inactive {
+  opacity: 0;
+  transition: all var(--aj-toaster__animation-duration)
+    var(--aj-toaster__animation-easing);
+  transition-property: opacity, transform;
+}

@@ -1,0 +1,20 @@
+.l-catch-error {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-color-contrast);
+}
+
+.catch-error__inner {
+  color: var(--foreground-color);
+  padding: 1.5rem;
+  border: 1px solid var(--dark-blue1);
+  border-radius: 7px;
+  background: var(--background-color-contrast3);
+  max-width: 32rem;
+}
