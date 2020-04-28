@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Auth from './contexts/auth.context';
 // import PrivateRoute from './components/privateRoute';
-// import Template from './components/template';
+import { With_Header, With_Header_Sidebar } from './components/layouts/main';
 import Home from './pages/Home';
 import Chat from './pages/chat/application';
-// import Dashboard from './pages/dashboard';
+import 'beyond-ui/beyond-ui.css';
 
 const App = () => {
   return (
@@ -13,21 +13,24 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            {/* <Template variant="clear"> */}
-            <Home />
-            {/* </Template> */}
+            <p>Home</p>
+          </Route>
+          <Route exact path="/historical-data">
+            <With_Header_Sidebar>
+              <p>Historical Data</p>
+            </With_Header_Sidebar>
+          </Route>
+          <Route exact path="/projects">
+            <With_Header>
+              <p>projects</p>
+            </With_Header>
           </Route>
           <Route exact path="/chat">
-            {/* <Template variant="clear"> */}
-            <Chat />
-            {/* </Template> */}
+            <With_Header>
+              <Chat />
+            </With_Header>
           </Route>
           {/* <PrivateRoute exact path="/">
-            <Template variant="main">
-              <Dashboard />
-            </Template>
-          </PrivateRoute> */}
-          {/* <PrivateRoute path="/dashboard">
             <Template variant="main">
               <Dashboard />
             </Template>
