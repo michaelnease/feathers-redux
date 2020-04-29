@@ -3,13 +3,13 @@ import './accordion.css';
 
 const style = {
   large: {
-    height: 200,
+    height: 210,
   },
   medium: {
-    height: 125,
+    height: 140,
   },
   small: {
-    height: 75,
+    height: 70,
   },
 };
 
