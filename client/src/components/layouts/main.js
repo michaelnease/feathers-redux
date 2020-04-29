@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './main.css';
+import './layout.css';
 
 export const WithHeader = ({ children }) => {
   return (
@@ -70,7 +70,7 @@ export const WithHeaderSidebar = ({ children, initialSidebarState }) => {
         </ul>
       </nav>
       <main className="dashboard__main">
-        <div className="dashboard__inner ui-card">{children}</div>
+        <div className="dashboard__inner">{children}</div>
       </main>
     </div>
   );

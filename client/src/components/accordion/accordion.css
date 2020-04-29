@@ -1,0 +1,57 @@
+.accordion {
+  display: flex;
+}
+
+.panel {
+  display: flex;
+  color: white;
+  flex-grow: 1;
+  width: 0%;
+  transition: .1s linear ease;
+  transition-property: width, background-color;
+}
+
+.accordion-panel {
+  display: flex;
+  flex-grow: 1;
+}
+
+.panel.active,
+.panel.active .accordion-panel  {
+  width: 40%;
+}
+
+.panel .full,
+.panel .divider {
+  display: none;
+}
+
+.panel.active .full {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 25% 0 10%;
+}
+
+.panel.active .divider {
+  display: flex;
+  align-self: center;
+  height: 70%;
+  border-right: 2px solid #fff;
+  opacity: 0.25;
+}
+
+.panel.active .summary {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel .summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

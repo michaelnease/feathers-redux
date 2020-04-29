@@ -7,6 +7,7 @@
 }
 
 .dashboard__nav {
+  overflow: hidden;
   background-color: var(--navy-blue);
   color: white;
   box-shadow: none; 
@@ -31,4 +32,8 @@
 .dashboard__nav.nav--closed a{
   opacity: 0;
   transition: .2s ease-in all;
+}
+
+.dashboard__inner {
+  padding: 0
 }
